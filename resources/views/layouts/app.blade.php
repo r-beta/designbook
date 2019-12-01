@@ -78,6 +78,9 @@
         </nav>
 
         <main class="py-4">
+            {{-- テスト用、後で消す --}}
+            @include('flash-message')
+
             @yield('content')
         </main>
     </div>
