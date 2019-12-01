@@ -8,6 +8,9 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
+
+                    {{-- コントローラ側で$request->session()->put('status', 'メッセージ');
+                        としてあげたら「メッセージ」と表示されるようになります。とのこと --}}
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
