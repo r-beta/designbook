@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    {{-- favicon --}}
+    <link rel="shortcut icon" href="{{ asset('/gopher.ico') }}">
 </head>
 <body>
     <div id="app">
@@ -78,9 +81,6 @@
         </nav>
 
         <main class="py-4">
-            {{-- テスト用、後で消す --}}
-            @include('flash-message')
-
             @yield('content')
         </main>
     </div>

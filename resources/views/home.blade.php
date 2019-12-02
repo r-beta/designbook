@@ -17,7 +17,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    ホーム画面
                 </div>
             </div>
         </div>
