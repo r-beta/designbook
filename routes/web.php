@@ -17,8 +17,4 @@
 
 Auth::routes(['verify' => true]);
 
-Route::get('/', 'HomeController@index')->name('home');
-
-Route::get('profile', function () {
-    // Only verified users may enter...
-})->middleware('verified');
+Route::get('/', 'HomeController@index')->name('home')->middleware('verified');
