@@ -42,6 +42,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">Product</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Brand</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/') }}">Post</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
