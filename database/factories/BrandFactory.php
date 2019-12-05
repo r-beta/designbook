@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 $factory->define(Brand::class, function (Faker $faker) {
     $now = Carbon::now();
-    // $faker = Faker::create('ja_JP');
+    $faker = Faker::create('ja_JP');
     return [
         'name' => $faker->company,
         'url' => Str::random(24),
