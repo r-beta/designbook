@@ -15,6 +15,12 @@
 //     return view('welcome');
 // });
 
+// 認証関連
 Auth::routes(['verify' => true]);
 
+// ホーム画面
 Route::get('/', 'HomeController@index')->name('home')->middleware('verified');
+
+// Brandページ
+Route::resource('brand', 'BrandController');
+
