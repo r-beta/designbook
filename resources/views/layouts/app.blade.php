@@ -43,7 +43,7 @@
                             <a class="nav-link" href="{{ url('/') }}">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/brand/index') }}">Brand</a>
+                            <a class="nav-link" href="{{ url('/brand') }}">Brand</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">Post</a>

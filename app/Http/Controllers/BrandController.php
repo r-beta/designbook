@@ -14,7 +14,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $brands = Brand::simplePaginate(3);
+        $brands = Brand::paginate(3);
         return view('brand.index', compact('brands'));
     }
 
@@ -47,7 +47,8 @@ class BrandController extends Controller
      */
     public function show($id)
     {
-        //
+        $brand = Brand::findOrFail($id);
+        return view('home', compact('brand'));
     }
 
     /**

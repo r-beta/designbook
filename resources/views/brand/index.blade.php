@@ -20,8 +20,10 @@
                 </tr>
             @endforeach
         </tbody>
-        {{ $brands->links() }}
     </table>
+    <div class="row justify-content-center mb-4">
+        <p>{{ $brands->links() }}</p>
+    </div>
 </div>
 
 
@@ -40,8 +42,6 @@
 {{--
     今後改善したいこと
     1. S3からの画像表示
-    2. ペジネーション
-    3. 文字情報を縦並びにしてXDに近づける
     4. ソート可能にする
     5. フォローの実装
     6. Bootstrapの微調整
