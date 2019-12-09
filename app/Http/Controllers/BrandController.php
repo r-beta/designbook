@@ -48,7 +48,8 @@ class BrandController extends Controller
     public function show($id)
     {
         $brand = Brand::findOrFail($id);
-        return view('brand.detail', compact('brand'));
+        $users = Brand::findOrFail($id)->users;
+        return view('brand.detail', compact('brand', 'users'));
     }
 
     /**

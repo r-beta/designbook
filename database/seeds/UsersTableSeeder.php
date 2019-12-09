@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
                 'birthday' => $rand_date,
                 'profile_image' => Str::random(64),
                 'admin_user' => rand(0,1),
-                'brands_id' => rand(1,10),
+                'brand_id' => rand(1,10),
                 'email_verified_at' => $now,
                 'remember_token' => Str::random(12),
                 'password' => Hash::make('testtest'), // 全テストユーザー「testtest」でログイン可能

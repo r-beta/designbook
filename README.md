@@ -16,6 +16,7 @@ PW: testtest
     - Pagination
         - Eloquent ORMの場合のみ
 - Eloquent ORM
+    - 1対多のリレーショナルなデータ出力
     - Accesor
         - 都道府県
 - Resource (not RESTful)

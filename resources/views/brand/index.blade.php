@@ -11,7 +11,7 @@
                 <tr>
                     {{-- <td class="align-middle"><img src="/storage/{{ $brand->logo_image }}" width="50px" class="rounded-circle d-block mx-auto"></td> --}}
                     <td class="align-middle m-auto">
-                        <h5 class="font-weight-bold m-auto text-center">{{ $brand->name }}</h5>
+                        <a href="{{ url("/brand/{$brand->id}") }}"><h5 class="font-weight-bold m-auto text-center">{{ $brand->name }}</h5></a>
                     </td>
                     <td class="d-flex align-items-center m-auto">
                         <p class="m-auto text-center d-flex align-items-center">{{ $brand->prefecture_name }}</p>

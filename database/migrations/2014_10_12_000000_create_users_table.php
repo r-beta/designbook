@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->date('birthday');
             $table->string('profile_image');
             $table->integer('admin_user');
-            $table->integer('brands_id')->unsigned();
+            $table->integer('brand_id')->unsigned();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
