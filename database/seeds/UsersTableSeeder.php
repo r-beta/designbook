@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
     {
         $now = Carbon::now();
         $faker = Faker::create('ja_JP');
-        for ($i = 1; $i <= 10; $i++ ){
+        for ($i = 1; $i <= 100; $i++ ){
             $int= mt_rand(315586800,946652400);
             $rand_date = date("Y-m-d",$int);
             $users = [
@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
                 'birthday' => $rand_date,
                 'profile_image' => Str::random(64),
                 'admin_user' => rand(0,1),
-                'brand_id' => rand(1,10),
+                'brand_id' => rand(1,20),
                 'email_verified_at' => $now,
                 'remember_token' => Str::random(12),
                 'password' => Hash::make('testtest'), // 全テストユーザー「testtest」でログイン可能

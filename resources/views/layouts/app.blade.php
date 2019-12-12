@@ -48,21 +48,21 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ url('/project') }}" role="button" aria-haspopup="true" aria-expanded="false">作品</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ url('/project') }}">一覧</a>
+                                <a class="dropdown-item" href="{{ route('projects.index') }}">一覧</a>
                                 <a class="dropdown-item" href="{{ url('/project/post') }}">作成</a>
                             </div>
                         </li>                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ url('/product') }}" role="button" aria-haspopup="true" aria-expanded="false">製品</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ url('/product') }}">一覧</a>
+                                <a class="dropdown-item" href="{{ route('products.index') }}">一覧</a>
                                 <a class="dropdown-item" href="{{ url('/product/post') }}">作成</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ url('/brand') }}" role="button" aria-haspopup="true" aria-expanded="false">ブランド</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ url('/brand') }}">一覧</a>
+                                <a class="dropdown-item" href="{{ route('brands.index') }}">一覧</a>
                                 <a class="dropdown-item" href="{{ url('/brand/post') }}">作成</a>
                             </div>
                         </li>

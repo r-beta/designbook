@@ -10,6 +10,12 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
+    // brandsテーブルとの多対1結合
+    public function brands()
+    {
+        return $this->belongsTo('\App\Brand');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
