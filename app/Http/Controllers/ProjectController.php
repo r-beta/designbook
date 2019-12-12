@@ -15,7 +15,7 @@ class ProjectController extends Controller
     public function index()
     {
         $brands = Brand::paginate(3);
-        return view('project.index', compact('brands'));        
+        return view('projects.index', compact('brands'));        
     }
 
     /**
@@ -25,7 +25,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $brands = Brand::paginate(3);
+        return view('projects.show', compact('brands'));        
     }
 
     /**

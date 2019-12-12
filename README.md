@@ -19,19 +19,18 @@ PW: testtest
     -   Pagination
         -   Eloquent ORM の場合のみ
 -   Eloquent ORM
-    -   1 対多のリレーショナルなデータ出力
+    -   1 対 多のリレーショナルなデータ出力
     -   Accesor
-        -   都道府県
+        -   都道府県(Config に都道府県の配列登録)
 -
 
 # 実装したい
 
--   Eloquent ORM
-    -   Mutator
 -   Test
 -   Archtecture
 -   Laravel Scout (Elasticsearch or Algolia)
 -   Sort
+-   郵便番号から住所の自動入力
 
 # 修正したい箇所
 

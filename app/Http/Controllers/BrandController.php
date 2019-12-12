@@ -15,7 +15,8 @@ class BrandController extends Controller
 
     public function create()
     {
-        //
+        $prefs = config('pref');
+        return view('brands.create', compact('prefs'));
     }
 
     public function store(Request $request)
