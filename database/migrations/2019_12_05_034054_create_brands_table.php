@@ -16,14 +16,14 @@ class CreateBrandsTable extends Migration
         Schema::create('brands', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('url');
-            $table->string('postal_code');
+            $table->string('url')->nullable();
+            $table->string('postal_code')->nullable();
             $table->integer('prefecture');
-            $table->string('address');
+            $table->string('address')->nullable();
             $table->string('address_url')->nullable();
             $table->string('email');
             $table->string('phone_number')->nullable();
-            $table->string('logo_image');
+            $table->string('logo_image')->nullable();
             $table->timestamps();
         });
     }

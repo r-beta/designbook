@@ -22,10 +22,14 @@ PW: testtest
     -   1 対 多のリレーショナルなデータ出力
     -   Accesor
         -   都道府県(Config に都道府県の配列登録)
--
+-   その他
+    -   バリデーション
+    -   必須入力制御
+    -   S3 での画像読み取り / アップロード
 
 # 実装したい
 
+-   管理者機能
 -   Test
 -   Archtecture
 -   Laravel Scout (Elasticsearch or Algolia)

@@ -5,11 +5,18 @@
     <div class="row justify-content-center mb-4">
         <h3 class="my-auto">ブランド一覧</h3>
     </div>
+    @if ($message = Session::get('success'))
+        <div class="row justify-content-center">
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        </div>
+    @endif
     <table class="table table-hover">
         <tbody>
             @foreach($brands as $brand)
                 <tr>
-                    {{-- <td class="align-middle"><img src="/storage/{{ $brand->logo_image }}" width="50px" class="rounded-circle d-block mx-auto"></td> --}}
+                    <td class="align-middle"><img src="{{ $brand->url }}" class="rounded-circle d-block mx-auto"></td>
                     <td class="align-middle m-auto">
                         <a href="{{ route('brands.show',$brand->id) }}"><h5 class="font-weight-bold m-auto text-center">{{ $brand->name }}</h5></a>
                     </td>
