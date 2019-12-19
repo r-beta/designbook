@@ -5,18 +5,20 @@
     <div class="row justify-content-center mb-4">
         <h3 class="my-auto">ブランド一覧</h3>
     </div>
-    @if ($message = Session::get('success'))
-        <div class="row justify-content-center">
-            <div class="alert alert-success">
-                <p>{{ $message }}</p>
-            </div>
+
+    {{-- ブランド作成のフラッシュメッセージ --}}
+    @if (session('success'))
+        <div class="alert alert-success text-center" role="alert">
+            {{ session('success') }}
         </div>
     @endif
+
+    {{-- 一覧 --}}
     <table class="table table-hover">
         <tbody>
             @foreach($brands as $brand)
                 <tr>
-                    <td class="align-middle"><img src="{{ $brand->url }}" class="rounded-circle d-block mx-auto"></td>
+                    <td class="align-middle"><img src="{{ $brand->image_url }}" class="rounded-circle d-block mx-auto" style="width: 100px;height: 100px;"></td>
                     <td class="align-middle m-auto">
                         <a href="{{ route('brands.show',$brand->id) }}"><h5 class="font-weight-bold m-auto text-center">{{ $brand->name }}</h5></a>
                     </td>
@@ -28,18 +30,11 @@
             @endforeach
         </tbody>
     </table>
+
+    {{-- ペジネーションリンク --}}
     <div class="row justify-content-center mb-4">
         <p>{{ $brands->links() }}</p>
     </div>
 </div>
 
 @endsection
-
-{{--
-    今後改善したいこと
-    1. S3からの画像表示
-    4. ソート可能にする
-    5. フォローの実装
-    6. Bootstrapの微調整
- --}}
- 

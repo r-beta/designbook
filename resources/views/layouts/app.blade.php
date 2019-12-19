@@ -52,7 +52,7 @@
                                 <a class="dropdown-item" href="{{ route('projects.index') }}">一覧</a>
                                 <a class="dropdown-item" href="{{ route('projects.create') }}">作成</a>
                             </div>
-                        </li>                        
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ url('/product') }}" role="button" aria-haspopup="true" aria-expanded="false">製品</a>
                             <div class="dropdown-menu">
