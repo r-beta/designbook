@@ -23,6 +23,12 @@ class Brand extends Model
         return config('pref.' . $this->prefecture);
     }
 
+    // 都道府県のミューテタ(Controllerで制御できたので不要になった)
+    // public function setPrefectureAttribute($value)
+    // {
+    //     $this->attributes['prefecture'] = strtolower($value);
+    // }
+
     // S3のURL変換アクセサー
     public function getImageUrlAttribute()
     {

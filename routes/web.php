@@ -13,4 +13,5 @@ Route::resource('projects', 'ProjectController')->middleware('verified');
 Route::resource('products', 'ProductController')->middleware('verified');
 
 // Brandページ
+Route::post('brands/confirm', 'BrandController@confirm')->name('brands.confirm')->middleware('verified');
 Route::resource('brands', 'BrandController')->middleware('verified');

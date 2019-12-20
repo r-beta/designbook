@@ -22,25 +22,39 @@ class BrandController extends Controller
         return view('brands.create', compact('prefs'));
     }
 
-    public function store(Request $request)
+    public function confirm(Request $request)
     {
         // バリデーション
         $request->validate([
             'name' => 'required',
-            'url' => 'url',
+            'url' => 'nullable | url',
             // 'postal_code' => 'required',
             'prefecture' => 'between:1,47',
             // 'address' => 'required',
-            'address_url' => 'url',
+            'address_url' => 'nullable | url',
             'email' => 'required | email',
             'phone_number' => 'required',
         ]);
 
-        // S3に保存
+        // 都道府県のIDをconfigでテキスト形式に変更
+        $prefecture_name = config('pref.' . $request->prefecture);
+
+        // S3に保存 & 文字列情報を追加
         $logo_image = Storage::disk('s3')->put('images/brands', $request->file);
         $request->merge([
             'logo_image' => $logo_image,
         ]);
+
+        // 送信するデータを絞り込み
+        $input = $request->only('name', 'url', 'postal_code', 'prefecture', 'address',
+            'address_url', 'email', 'phone_number', 'logo_image');
+
+        //入力内容確認ページのviewにデータを渡して表示
+        return view('brands.confirm', compact('input', 'prefecture_name'));
+    }
+
+    public function store(Request $request)
+    {
         // DBに保存
         Brand::create($request->only('name', 'url', 'postal_code', 'prefecture', 'address',
             'address_url', 'email', 'phone_number', 'logo_image'));
@@ -76,4 +90,5 @@ class BrandController extends Controller
     {
         //
     }
+
 }
